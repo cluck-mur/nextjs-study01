@@ -1,2 +1,3 @@
 title: Nextjsを使ってメモアプリを作ってみる
-url: https://tech.frenps.co.jp/archives/422
+url1: https://tech.frenps.co.jp/archives/422
+url2: https://tech.frenps.co.jp/archives/469
