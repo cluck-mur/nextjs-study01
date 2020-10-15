@@ -1,35 +1,22 @@
-export default function New() {
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const target = e.target
-        const title = target.title.value
-        const content = target.content.value
-        console.log(title)
-        console.log(content) 
-    }
+/**
+ * コンテナにしたnew.js
+ */
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { actions } from '../store'
+import NewComponent from '../components/new'
 
-    return(
-        <div>
-            <h1>メモ作成</h1>
-            <div>
-            <form onSubmit={handleSubmit}>
-            <div>
-                <div>
-                <label htmlFor="">タイトル</label>
-                </div>
-                <input type="text" name="title" placeholder="title"/>
-            </div>
-            <div>
-                <div>
-                <label htmlFor="">本文</label>
-                </div>
-                <textarea name="content" placeholder="content"/>
-            </div>
-            <div>
-                <input type="submit" value="submit"/>
-            </div>
-            </form>
-            </div>
-        </div>
-    )
+const mapStateToProps = () => {
+    return {
+
+    }
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        ...bindActionCreators(actions, dispatch)
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewComponent)
