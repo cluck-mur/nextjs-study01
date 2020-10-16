@@ -37,7 +37,8 @@ export const deleteMemo = (index) => {
     return { Type: actionTypes.DELETE, data: index}
 }
 
-export function initializeStore (initialState = initialState) {
+//export function initializeStore (initialState = initialState) {
+export function initializeStore (initialState) {
     return createStore(
         reducer,
         initialState,
